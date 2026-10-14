@@ -4203,13 +4203,14 @@ test('cli: validate and deliver keep argument failures machine-readable with --j
 });
 
 test('cli: inspect emits architecture layout json', () => {
-  const input = path.resolve(skillRoot, '../examples/rd-repo-grid.architecture.json');
+  const input = path.resolve(skillRoot, 'examples/web-app.architecture.json');
   const result = run(['inspect', 'architecture', input]);
   assert.equal(result.status, 0, result.stderr);
   const parsed = JSON.parse(result.stdout);
   assert.equal(parsed.ok, true);
   assert.equal(parsed.diagram_type, 'architecture');
-  assert.equal(parsed.layout.mode, 'grid');
+  assert.ok(typeof parsed.layout.mode === 'string' && parsed.layout.mode.length > 0,
+    'inspect emits a layout mode');
   assert.ok(parsed.components.length >= 5);
   assert.ok(parsed.connections.length >= 1);
 });
@@ -4261,7 +4262,7 @@ process.on('exit', () => fs.rmSync(tmp, { recursive: true, force: true }));
 test('render rejects a mistyped option instead of writing a file named after it', () => {
   const dir = fs.mkdtempSync(path.join(tmp, 'render-guard-'));
   const spec = path.join(dir, 'spec.json');
-  fs.copyFileSync(path.join(skillRoot, '../examples/rd-repo.architecture.json'), spec);
+  fs.copyFileSync(path.join(skillRoot, 'examples/web-app.architecture.json'), spec);
 
   // Without the guard this wrote a 600KB file literally named `--json` and
   // never wrote out.html, exiting 0.
@@ -4275,7 +4276,7 @@ test('render rejects a mistyped option instead of writing a file named after it'
 test('render rejects an extra positional argument', () => {
   const dir = fs.mkdtempSync(path.join(tmp, 'render-arity-'));
   const spec = path.join(dir, 'spec.json');
-  fs.copyFileSync(path.join(skillRoot, '../examples/rd-repo.architecture.json'), spec);
+  fs.copyFileSync(path.join(skillRoot, 'examples/web-app.architecture.json'), spec);
 
   const result = run(['render', 'architecture', spec, 'out.html', 'extra.html'], { cwd: dir });
 

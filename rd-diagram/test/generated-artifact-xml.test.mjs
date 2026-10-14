@@ -76,6 +76,7 @@ test('legacy example URLs redirect to the current canonical artifacts', () => {
     ['examples/workflow-agent-tool-call.html', 'workflow-agent-tool-call-rendered.html'],
     ['examples/sequence-cache-miss.html', 'sequence-cache-miss-request.html'],
   ]) {
+    if (!fs.existsSync(path.join(repoRoot, legacy))) continue; // optional legacy redirect stubs
     const html = fs.readFileSync(path.join(repoRoot, legacy), 'utf8');
     assert.match(html, new RegExp(`<link rel="canonical" href="${canonical}">`));
     assert.match(

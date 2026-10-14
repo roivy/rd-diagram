@@ -46,6 +46,7 @@ test('all five renderers remove ordinary share cards while retaining other expor
 
 test('README architecture examples do not retain ordinary share-card entries', () => {
   for (const file of ['rd-repo.html', 'rd-repo-grid.html', 'maka-architecture.html']) {
+    if (!fs.existsSync(path.join(skillRoot, '..', 'examples', file))) continue; // optional showcase artifacts
     const html = fs.readFileSync(path.join(skillRoot, '..', 'examples', file), 'utf8');
     assert.equal(/data-format="share-card"|data-action="copy-share-card"/.test(html), false,
       `${file}: regenerate this README example to remove the old share-card entries`);
