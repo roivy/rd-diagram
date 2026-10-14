@@ -2186,6 +2186,7 @@ function usage() {
   rd check <output.html> [--json] [--require-provenance]
   rd browser-check <output.html> [--json|--summary] [--require-provenance] [--out-dir <dir>]
   rd visual-check <output.html> [--json|--summary] [--require-provenance] [--out-dir <dir>]
+  rd export drawio <type> <input.json> [output.drawio] [--theme light|dark] [--json]
   rd guide [scenario or question] [--json] [--lang en|zh]
   rd brands [name, alias, domain, or category] [--json]
   rd brands capture <url> [--json]
@@ -5746,6 +5747,15 @@ function commandExamples(args) {
   if (result.status !== 0) exitFrom(result);
 }
 
+function commandExport(args) {
+  const [format] = args;
+  if (format !== 'drawio') {
+    fail(`Unknown export format "${format ?? ''}". Supported: drawio.`);
+  }
+  const result = runNode([path.join(skillRoot, 'scripts/export-drawio.mjs'), ...args.slice(1)], { cwd: skillRoot });
+  if (result.status !== 0) exitFrom(result);
+}
+
 async function commandDoctor(args) {
   const unknown = args.find((arg) => arg.startsWith('--'));
   if (unknown) fail(`Unknown doctor option "${unknown}".`);
@@ -6919,6 +6929,9 @@ try {
       break;
     case 'examples':
       commandExamples(args);
+      break;
+    case 'export':
+      commandExport(args);
       break;
     case 'doctor':
       await commandDoctor(args);
