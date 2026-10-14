@@ -9,7 +9,9 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const skillRoot = path.resolve(__dirname, '..');
 const repoRoot = path.resolve(skillRoot, '..');
-const demoDir = path.join(repoRoot, '.rd', 'demo');
+const demoDir = fs.existsSync(path.join(repoRoot, '.rd', 'demo'))
+  ? path.join(repoRoot, '.rd', 'demo')
+  : path.join(repoRoot, 'demo');
 
 async function withPage(file, fn) {
   const { desktopBrowser } = await import('./helpers/desktop-browser.mjs');
