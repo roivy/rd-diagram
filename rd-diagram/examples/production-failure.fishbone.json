@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "diagram_type": "fishbone",
+  "meta": {
+    "title": "机器人退货失效分析（FA）",
+    "subtitle": "上市 90 天退货率 3.4% → 目标 <1%",
+    "output": "production-failure-fishbone.html",
+    "quality_profile": "showcase",
+    "animation": "trace"
+  },
+  "problem": {
+    "text": "巡检机器人退货率超标",
+    "sublabel": "90 天 3.4% · 目标 <1%"
+  },
+  "categories": [
+    {
+      "id": "man",
+      "label": "人",
+      "causes": [
+        {
+          "text": "装机调试未按 SOP"
+        },
+        {
+          "text": "客户地面超规格使用"
+        },
+        {
+          "text": "客服未引导首充循环"
+        }
+      ]
+    },
+    {
+      "id": "machine",
+      "label": "机",
+      "causes": [
+        {
+          "text": "驱动板功率余量不足",
+          "risk": "high"
+        },
+        {
+          "text": "云台舵机虚焊",
+          "verified": true,
+          "evidence": "退货机 87% 云台失效，X-Ray 确认虚焊",
+          "risk": "high"
+        },
+        {
+          "text": "充电桩极板公差大"
+        }
+      ]
+    },
+    {
+      "id": "material",
+      "label": "料",
+      "causes": [
+        {
+          "text": "轮组橡胶耐磨不足",
+          "verified": true,
+          "evidence": "轮径磨损 8mm/月",
+          "risk": "high"
+        },
+        {
+          "text": "电池批次一致性差",
+          "risk": "medium"
+        },
+        {
+          "text": "外壳卡扣料脆"
+        }
+      ]
+    },
+    {
+      "id": "method",
+      "label": "法",
+      "causes": [
+        {
+          "text": "DFMEA 未覆盖地毯场景"
+        },
+        {
+          "text": "出厂老化时长不够"
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "label": "环",
+      "causes": [
+        {
+          "text": "强日光干扰 ToF"
+        },
+        {
+          "text": "地毯线缆缠绕频发",
+          "subcauses": [
+            "缠绕自解脱逻辑缺失"
+          ],
+          "risk": "medium"
+        }
+      ]
+    },
+    {
+      "id": "measurement",
+      "label": "测",
+      "causes": [
+        {
+          "text": "产线导通抽检偏松"
+        },
+        {
+          "text": "老化未覆盖满载行走"
+        }
+      ]
+    }
+  ]
+}

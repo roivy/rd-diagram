@@ -1,0 +1,707 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "巡检机器人主控板原理框图",
+    "subtitle": "核心板 + 驱动板 + 传感板 · 信号类型全标注",
+    "output": "robot-mainboard.html",
+    "quality_profile": "showcase",
+    "engineering_profile": "electronic",
+    "animation": "trace"
+  },
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "核心板",
+      "wraps": [
+        "mcu",
+        "pmic",
+        "dram",
+        "emmc",
+        "eth",
+        "afe"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "驱动/执行板",
+      "wraps": [
+        "drv-l",
+        "drv-r",
+        "motor-l",
+        "motor-r",
+        "servo",
+        "fan",
+        "tvs",
+        "caps",
+        "ind",
+        "xtal",
+        "shunt",
+        "npn"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "传感板",
+      "wraps": [
+        "lidar",
+        "imu",
+        "tof",
+        "enc-l",
+        "enc-r"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "无线与外部",
+      "wraps": [
+        "wifi",
+        "usb-hub",
+        "sim"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "分立器件库（BOM 展示）",
+      "wraps": [
+        "tvs",
+        "caps",
+        "ind",
+        "xtal",
+        "shunt",
+        "npn"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "mcu",
+      "type": "mcu",
+      "label": "主控 SoC",
+      "sublabel": "RK3568 · U1",
+      "pos": [
+        350,
+        230
+      ],
+      "size": [
+        900,
+        72
+      ]
+    },
+    {
+      "id": "pmic",
+      "type": "power",
+      "label": "PMIC 电源树",
+      "sublabel": "RK809 · U2",
+      "pos": [
+        370,
+        440
+      ],
+      "size": [
+        150,
+        64
+      ]
+    },
+    {
+      "id": "batt",
+      "type": "power",
+      "label": "电池包",
+      "sublabel": "4S 14.8V · BT1",
+      "pos": [
+        130,
+        450
+      ],
+      "size": [
+        150,
+        56
+      ]
+    },
+    {
+      "id": "dram",
+      "type": "memory",
+      "label": "LPDDR4",
+      "sublabel": "2GB · U3",
+      "pos": [
+        130,
+        150
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "emmc",
+      "type": "memory",
+      "label": "eMMC",
+      "sublabel": "16GB · U4",
+      "pos": [
+        130,
+        250
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "eth",
+      "type": "connector",
+      "label": "千兆网口",
+      "sublabel": "HR911105A · J1",
+      "pos": [
+        130,
+        350
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "drv-l",
+      "type": "actuator",
+      "label": "左驱驱动",
+      "sublabel": "DRV8353 · U5",
+      "pos": [
+        350,
+        560
+      ],
+      "size": [
+        150,
+        56
+      ]
+    },
+    {
+      "id": "drv-r",
+      "type": "actuator",
+      "label": "右驱驱动",
+      "sublabel": "DRV8353 · U6",
+      "pos": [
+        540,
+        560
+      ],
+      "size": [
+        150,
+        56
+      ]
+    },
+    {
+      "id": "motor-l",
+      "type": "actuator",
+      "label": "左轮电机",
+      "sublabel": "直流有刷 24W",
+      "pos": [
+        730,
+        560
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "motor-r",
+      "type": "actuator",
+      "label": "右轮电机",
+      "sublabel": "直流有刷 24W",
+      "pos": [
+        920,
+        560
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "servo",
+      "type": "actuator",
+      "label": "云台舵机",
+      "sublabel": "DS3235 ×2",
+      "pos": [
+        1110,
+        560
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "fan",
+      "type": "actuator",
+      "label": "散热风扇",
+      "sublabel": "PWM 4线",
+      "pos": [
+        1300,
+        560
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "lidar",
+      "type": "sensor",
+      "label": "激光雷达",
+      "sublabel": "思岚 S2",
+      "pos": [
+        350,
+        70
+      ],
+      "size": [
+        150,
+        56
+      ]
+    },
+    {
+      "id": "imu",
+      "type": "sensor",
+      "label": "IMU",
+      "sublabel": "BMI088 · U7",
+      "pos": [
+        540,
+        70
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "tof",
+      "type": "sensor",
+      "label": "ToF 深度相机",
+      "sublabel": "奥比中光 A1",
+      "pos": [
+        730,
+        70
+      ],
+      "size": [
+        160,
+        56
+      ]
+    },
+    {
+      "id": "enc-l",
+      "type": "sensor",
+      "label": "左编码器",
+      "sublabel": "AB 相 1024线",
+      "pos": [
+        930,
+        70
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "enc-r",
+      "type": "sensor",
+      "label": "右编码器",
+      "sublabel": "AB 相 1024线",
+      "pos": [
+        1120,
+        70
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "afe",
+      "type": "analog-fe",
+      "label": "前端调理",
+      "sublabel": "AD8422 · U8",
+      "pos": [
+        600,
+        440
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "wifi",
+      "type": "rf",
+      "label": "WiFi6 模组",
+      "sublabel": "AX200 · U9",
+      "pos": [
+        1480,
+        200
+      ],
+      "size": [
+        150,
+        56
+      ]
+    },
+    {
+      "id": "usb-hub",
+      "type": "connector",
+      "label": "USB Hub",
+      "sublabel": "SL2.1A · U10",
+      "pos": [
+        1480,
+        300
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "sim",
+      "type": "connector",
+      "label": "4G 模组",
+      "sublabel": "EC20 · U11",
+      "pos": [
+        1480,
+        400
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "canbus",
+      "type": "bus",
+      "label": "CAN 总线",
+      "sublabel": "TJA1051 ×2",
+      "pos": [
+        1480,
+        500
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "cloud",
+      "type": "external",
+      "label": "云端调度",
+      "sublabel": "Roivy Fleet",
+      "pos": [
+        1480,
+        610
+      ],
+      "size": [
+        150,
+        56
+      ]
+    },
+    {
+      "id": "tvs",
+      "type": "diode",
+      "label": "TVS 防护",
+      "sublabel": "SMBJ24CA · D1",
+      "pos": [
+        350,
+        700
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "caps",
+      "type": "capacitor",
+      "label": "去耦电容阵",
+      "sublabel": "0.1µF×16 · C1-C16",
+      "pos": [
+        545,
+        700
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "ind",
+      "type": "inductor",
+      "label": "功率电感",
+      "sublabel": "CD54 10µH · L1",
+      "pos": [
+        740,
+        700
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "xtal",
+      "type": "crystal",
+      "label": "晶振 24MHz",
+      "sublabel": "3225 ±10ppm · Y1",
+      "pos": [
+        935,
+        700
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "shunt",
+      "type": "resistor",
+      "label": "采样电阻",
+      "sublabel": "2mΩ 1% · R2",
+      "pos": [
+        1130,
+        700
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "npn",
+      "type": "transistor",
+      "label": "驱动三极管",
+      "sublabel": "SS8050 · Q1",
+      "pos": [
+        1325,
+        700
+      ],
+      "size": [
+        150,
+        52
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "e1",
+      "from": "batt",
+      "to": "pmic",
+      "label": "14.8V",
+      "signal": "power"
+    },
+    {
+      "id": "e2",
+      "from": "pmic",
+      "to": "mcu",
+      "label": "5V/3V3/1V1",
+      "signal": "power"
+    },
+    {
+      "id": "e3",
+      "from": "pmic",
+      "to": "drv-l",
+      "label": "24V",
+      "signal": "power",
+      "variant": "emphasis"
+    },
+    {
+      "id": "e4",
+      "from": "pmic",
+      "to": "drv-r",
+      "label": "24V",
+      "signal": "power",
+      "variant": "emphasis"
+    },
+    {
+      "id": "e5",
+      "from": "mcu",
+      "to": "dram",
+      "label": "DDR32bit",
+      "signal": "digital"
+    },
+    {
+      "id": "e6",
+      "from": "mcu",
+      "to": "emmc",
+      "label": "eMMC 8bit",
+      "signal": "digital"
+    },
+    {
+      "id": "e7",
+      "from": "mcu",
+      "to": "eth",
+      "label": "RGMII",
+      "signal": "digital"
+    },
+    {
+      "id": "e8",
+      "from": "drv-l",
+      "to": "motor-l",
+      "label": "三相驱动",
+      "signal": "power"
+    },
+    {
+      "id": "e9",
+      "from": "drv-r",
+      "to": "motor-r",
+      "label": "三相驱动",
+      "signal": "power"
+    },
+    {
+      "id": "e10",
+      "from": "mcu",
+      "to": "drv-l",
+      "label": "PWM/SPI",
+      "signal": "digital"
+    },
+    {
+      "id": "e11",
+      "from": "mcu",
+      "to": "drv-r",
+      "label": "PWM/SPI",
+      "signal": "digital"
+    },
+    {
+      "id": "e12",
+      "from": "mcu",
+      "to": "servo",
+      "label": "PWM 50Hz",
+      "signal": "digital"
+    },
+    {
+      "id": "e13",
+      "from": "mcu",
+      "to": "fan",
+      "label": "PWM 调速",
+      "signal": "digital"
+    },
+    {
+      "id": "e14",
+      "from": "lidar",
+      "to": "mcu",
+      "label": "USB2",
+      "signal": "digital"
+    },
+    {
+      "id": "e15",
+      "from": "imu",
+      "to": "mcu",
+      "label": "SPI 10MHz",
+      "signal": "digital"
+    },
+    {
+      "id": "e16",
+      "from": "tof",
+      "to": "mcu",
+      "label": "USB3",
+      "signal": "digital",
+      "labelDy": 46
+    },
+    {
+      "id": "e17",
+      "from": "enc-l",
+      "to": "mcu",
+      "label": "QEI",
+      "signal": "digital"
+    },
+    {
+      "id": "e18",
+      "from": "enc-r",
+      "to": "mcu",
+      "label": "QEI",
+      "signal": "digital"
+    },
+    {
+      "id": "e19",
+      "from": "afe",
+      "to": "mcu",
+      "label": "ADC 0-3.3V",
+      "signal": "analog"
+    },
+    {
+      "id": "e20",
+      "from": "mcu",
+      "to": "wifi",
+      "label": "PCIe 1x",
+      "signal": "digital"
+    },
+    {
+      "id": "e21",
+      "from": "mcu",
+      "to": "usb-hub",
+      "label": "USB2 Hub",
+      "signal": "digital"
+    },
+    {
+      "id": "e22",
+      "from": "mcu",
+      "to": "sim",
+      "label": "USB2",
+      "signal": "digital",
+      "via": [
+        [
+          1360,
+          266
+        ],
+        [
+          1360,
+          426
+        ]
+      ]
+    },
+    {
+      "id": "e23",
+      "from": "mcu",
+      "to": "canbus",
+      "label": "CAN-FD",
+      "signal": "bus"
+    },
+    {
+      "id": "e24",
+      "from": "pmic",
+      "to": "afe",
+      "label": "AVDD 3.3V",
+      "signal": "power"
+    },
+    {
+      "id": "e25",
+      "from": "wifi",
+      "to": "cloud",
+      "label": "2.4/5GHz",
+      "signal": "rf"
+    },
+    {
+      "id": "e26",
+      "from": "sim",
+      "to": "cloud",
+      "label": "LTE",
+      "signal": "rf"
+    },
+    {
+      "id": "e27",
+      "from": "mcu",
+      "to": "pmic",
+      "label": "GND 共地",
+      "signal": "ground",
+      "variant": "dashed"
+    },
+    {
+      "id": "e28",
+      "from": "canbus",
+      "to": "drv-l",
+      "label": "CAN-H/L",
+      "signal": "bus"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "amber",
+      "title": "电源树要点",
+      "items": [
+        "4S 电池 14.8V → PMIC 三路输出：5V 外设 / 3V3 数字 / 1V1 核心",
+        "24V 驱动轨独立走线，与数字轨单点共地",
+        "功耗预算：整机峰值 78W，典型 41W"
+      ]
+    }
+  ]
+}

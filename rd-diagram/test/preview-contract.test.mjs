@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import test from 'node:test';
+import assert from 'node:assert/strict';
+
+const here = path.dirname(fileURLToPath(import.meta.url));
+const skillRoot = path.resolve(here, '..');
+const repoRoot = path.resolve(skillRoot, '..');
+const skill = fs.readFileSync(path.join(skillRoot, 'SKILL.md'), 'utf8');
+const delivery = fs.readFileSync(path.join(skillRoot, 'references', 'delivery-contract.md'), 'utf8');
+
+test('preview contract: the skill keeps live preview explicit, desktop-only, and last-good', () => {
+  assert.match(delivery, /rd\.mjs preview <type> <input>\.json <output>\.html/);
+  assert.match(delivery, /active desktop authoring loop/i);
+  assert.match(delivery, /previous verified revision on screen and on disk/i);
+  assert.match(delivery, /never start it by default/i);
+  assert.match(delivery, /CI, unattended agents, remote sharing, or mobile use/i);
+  assert.match(delivery, /must never enter the generated artifact or any export/i);
+});
+
+// (Roivy fork) upstream README-language test removed with the READMEs.
+
+test('preview contract: the canonical delivery reference owns no-leak and zero-dependency boundaries', () => {
+  assert.match(delivery, /Last-Good Live Preview/);
+  assert.match(delivery, /zero-dependency Skill ZIP/i);
+  assert.match(delivery, /Server state, port, source path, diagnostics, error text, and reload tokens must never enter/i);
+});

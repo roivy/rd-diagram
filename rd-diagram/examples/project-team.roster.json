@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "diagram_type": "roster",
+  "meta": {
+    "title": "项目团队花名册",
+    "subtitle": "巡检机器人项目组 · 组织架构树（示例人名为漫威角色）",
+    "output": "project-team-roster.html",
+    "layout": "org",
+    "quality_profile": "showcase",
+    "animation": "trace"
+  },
+  "groups": [
+    {
+      "id": "cmd",
+      "label": "指挥部"
+    },
+    {
+      "id": "hw",
+      "label": "硬件组"
+    },
+    {
+      "id": "sw",
+      "label": "软件组"
+    },
+    {
+      "id": "test",
+      "label": "测试组"
+    },
+    {
+      "id": "ops",
+      "label": "交付组"
+    }
+  ],
+  "persons": [
+    {
+      "id": "linzy",
+      "name": "林致远",
+      "title": "项目总监",
+      "group": "cmd",
+      "skills": [
+        "PMP",
+        "IPD"
+      ],
+      "details": [
+        {
+          "label": "职责",
+          "text": "统筹产品线 P0/P1 决策，直通管理层汇报"
+        },
+        {
+          "label": "经验",
+          "text": "12 年复杂硬件项目管理，主导过 4 条产品线量产"
+        },
+        {
+          "label": "擅长",
+          "text": "风险预判 / 跨部门资源协调"
+        }
+      ]
+    },
+    {
+      "id": "xuling",
+      "name": "徐玲",
+      "title": "项目经理",
+      "group": "cmd",
+      "skills": [
+        "敏捷",
+        "Scrum"
+      ]
+    },
+    {
+      "id": "chenfeng",
+      "name": "陈锋",
+      "title": "硬件负责人",
+      "group": "hw",
+      "skills": [
+        "原理图",
+        "PCB",
+        "EMC"
+      ],
+      "details": [
+        {
+          "label": "职责",
+          "text": "硬件总体方案与原理图评审终审"
+        },
+        {
+          "label": "经验",
+          "text": "10 年数字硬件，6 层 HDI 板 12 款量产"
+        },
+        {
+          "label": "擅长",
+          "text": "高速信号 / EMC 整改"
+        },
+        {
+          "label": "带人",
+          "text": "3 人硬件小组导师"
+        }
+      ]
+    },
+    {
+      "id": "wutao",
+      "name": "吴涛",
+      "title": "电机驱动工程师",
+      "group": "hw",
+      "skills": [
+        "FOC",
+        "驱动"
+      ]
+    },
+    {
+      "id": "yuanbo",
+      "name": "袁博",
+      "title": "电源工程师",
+      "group": "hw",
+      "skills": [
+        "DCDC",
+        "电池"
+      ]
+    },
+    {
+      "id": "zhengyu",
+      "name": "郑宇",
+      "title": "软件负责人",
+      "group": "sw",
+      "skills": [
+        "RTOS",
+        "C++"
+      ],
+      "details": [
+        {
+          "label": "职责",
+          "text": "软件架构与发布把关"
+        },
+        {
+          "label": "经验",
+          "text": "8 年嵌入式 RTOS，熟悉 ROS2 生态"
+        },
+        {
+          "label": "擅长",
+          "text": "模块化重构 / 内存优化"
+        }
+      ]
+    },
+    {
+      "id": "shenyan",
+      "name": "沈砚",
+      "title": "SLAM 算法工程师",
+      "group": "sw",
+      "skills": [
+        "SLAM",
+        "ROS2"
+      ],
+      "details": [
+        {
+          "label": "职责",
+          "text": "SLAM 与定位算法"
+        },
+        {
+          "label": "经验",
+          "text": "5 年视觉+激光融合导航"
+        },
+        {
+          "label": "擅长",
+          "text": "重定位优化 / 传感器标定"
+        }
+      ]
+    },
+    {
+      "id": "fangqi",
+      "name": "方启",
+      "title": "嵌入式工程师",
+      "group": "sw",
+      "skills": [
+        "STM32",
+        "CAN"
+      ],
+      "details": [
+        {
+          "label": "职责",
+          "text": "驱动与底层外设开发"
+        },
+        {
+          "label": "经验",
+          "text": "3 年 STM32/CAN 开发"
+        },
+        {
+          "label": "擅长",
+          "text": "电机控制调参"
+        }
+      ]
+    },
+    {
+      "id": "hanmeng",
+      "name": "韩萌",
+      "title": "上位机工程师",
+      "group": "sw",
+      "skills": [
+        "Qt",
+        "Web"
+      ]
+    },
+    {
+      "id": "bailu",
+      "name": "白露",
+      "title": "测试负责人",
+      "group": "test",
+      "skills": [
+        "自动化"
+      ],
+      "details": [
+        {
+          "label": "职责",
+          "text": "测试策略与出厂质量门"
+        },
+        {
+          "label": "经验",
+          "text": "9 年整机测试，自动化产线测试台架 3 套"
+        },
+        {
+          "label": "擅长",
+          "text": "FMEA / 8D 主导"
+        }
+      ]
+    },
+    {
+      "id": "dengke",
+      "name": "邓阔",
+      "title": "DFMEA 工程师",
+      "group": "test",
+      "skills": [
+        "FMEA",
+        "8D"
+      ]
+    },
+    {
+      "id": "guyan",
+      "name": "顾岩",
+      "title": "可靠性工程师",
+      "group": "test",
+      "skills": [
+        "HALT",
+        "寿命"
+      ]
+    },
+    {
+      "id": "qinfeng",
+      "name": "秦峰",
+      "title": "交付与服务负责人",
+      "group": "ops",
+      "skills": [
+        "现场"
+      ]
+    },
+    {
+      "id": "hejing",
+      "name": "何静",
+      "title": "海外交付工程师",
+      "group": "ops",
+      "skills": [
+        "英语",
+        "培训"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "from": "xuling",
+      "to": "linzy"
+    },
+    {
+      "from": "chenfeng",
+      "to": "linzy"
+    },
+    {
+      "from": "zhengyu",
+      "to": "linzy"
+    },
+    {
+      "from": "bailu",
+      "to": "linzy"
+    },
+    {
+      "from": "qinfeng",
+      "to": "linzy"
+    },
+    {
+      "from": "wutao",
+      "to": "chenfeng"
+    },
+    {
+      "from": "yuanbo",
+      "to": "chenfeng"
+    },
+    {
+      "from": "shenyan",
+      "to": "zhengyu"
+    },
+    {
+      "from": "fangqi",
+      "to": "zhengyu"
+    },
+    {
+      "from": "hanmeng",
+      "to": "zhengyu"
+    },
+    {
+      "from": "dengke",
+      "to": "bailu"
+    },
+    {
+      "from": "guyan",
+      "to": "bailu"
+    },
+    {
+      "from": "hejing",
+      "to": "qinfeng"
+    }
+  ]
+}

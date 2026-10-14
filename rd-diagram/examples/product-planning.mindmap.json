@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "diagram_type": "mindmap",
+  "meta": {
+    "title": "二代巡检机器人规划脑图",
+    "subtitle": "一代复盘 → 二代产品定义 · 全域规划",
+    "output": "product-planning-mindmap.html",
+    "quality_profile": "showcase",
+    "animation": "trace"
+  },
+  "root": {
+    "text": "二代巡检机器人",
+    "sublabel": "2026 Q2 立项 · 45+ 规划项"
+  },
+  "branches": [
+    {
+      "text": "一代痛点复盘",
+      "children": [
+        {
+          "text": "轮组耐磨",
+          "children": [
+            {
+              "text": "陶瓷轴承"
+            },
+            {
+              "text": "充气改实心+包胶"
+            }
+          ]
+        },
+        {
+          "text": "云台失效",
+          "children": [
+            {
+              "text": "激光焊替代回流"
+            },
+            {
+              "text": "增加 AOI 检测"
+            }
+          ]
+        },
+        {
+          "text": "地毯场景",
+          "children": [
+            {
+              "text": "刷地传感器"
+            },
+            {
+              "text": "缠绕自脱落"
+            }
+          ]
+        },
+        {
+          "text": "充电虚接",
+          "children": [
+            {
+              "text": "到位检测霍尔"
+            },
+            {
+              "text": "极板加大 30%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "导航升级",
+      "children": [
+        {
+          "text": "多源融合 SLAM",
+          "children": [
+            {
+              "text": "视觉+激光"
+            },
+            {
+              "text": "重定位优化"
+            }
+          ]
+        },
+        {
+          "text": "动态避障",
+          "children": [
+            {
+              "text": "行人轨迹预测"
+            },
+            {
+              "text": "低矮障碍识别"
+            }
+          ]
+        },
+        {
+          "text": "语义地图",
+          "children": [
+            {
+              "text": "电梯/门标注"
+            },
+            {
+              "text": "禁区自动学习"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "续航与补能",
+      "children": [
+        {
+          "text": "电池升级",
+          "children": [
+            {
+              "text": "半固态评估"
+            },
+            {
+              "text": "容量 20→32Ah"
+            }
+          ]
+        },
+        {
+          "text": "回充优化",
+          "children": [
+            {
+              "text": "低电预测调度"
+            },
+            {
+              "text": "对接失败重试"
+            }
+          ]
+        },
+        {
+          "text": "换电方案",
+          "children": [
+            {
+              "text": "双仓热插拔"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "场景扩展",
+      "children": [
+        {
+          "text": "跨楼层",
+          "children": [
+            {
+              "text": "梯控协议 v2"
+            },
+            {
+              "text": "多机排队调度"
+            }
+          ]
+        },
+        {
+          "text": "户外园区",
+          "children": [
+            {
+              "text": "IP54 结构"
+            },
+            {
+              "text": "宽温电池"
+            }
+          ]
+        },
+        {
+          "text": "安防巡逻",
+          "children": [
+            {
+              "text": "热成像模组"
+            },
+            {
+              "text": "异常行为识别"
+            }
+          ]
+        },
+        {
+          "text": "清洁联动",
+          "children": [
+            {
+              "text": "扫地模块选配"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "体验与服务",
+      "children": [
+        {
+          "text": "App 改版",
+          "children": [
+            {
+              "text": "地图实时可视"
+            },
+            {
+              "text": "一键召回"
+            }
+          ]
+        },
+        {
+          "text": "语音交互",
+          "children": [
+            {
+              "text": "离线唤醒"
+            },
+            {
+              "text": "多轮对话"
+            }
+          ]
+        },
+        {
+          "text": "开放 API",
+          "children": [
+            {
+              "text": "Webhook 事件"
+            },
+            {
+              "text": "门禁/OA 对接"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "质量目标",
+      "children": [
+        {
+          "text": "可靠性",
+          "children": [
+            {
+              "text": "MTBF 8000h"
+            },
+            {
+              "text": "退货率 <1%"
+            }
+          ]
+        },
+        {
+          "text": "环境",
+          "children": [
+            {
+              "text": "IP54 整机"
+            },
+            {
+              "text": "-10~45℃ 宽温"
+            }
+          ]
+        },
+        {
+          "text": "安全",
+          "children": [
+            {
+              "text": "双路急停"
+            },
+            {
+              "text": "激光 Class1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "成本与交付",
+      "children": [
+        {
+          "text": "BOM",
+          "children": [
+            {
+              "text": "降本 15%"
+            },
+            {
+              "text": "国产化替代清单"
+            }
+          ]
+        },
+        {
+          "text": "制造",
+          "children": [
+            {
+              "text": "自动化率 70%"
+            },
+            {
+              "text": "老化全覆盖"
+            }
+          ]
+        },
+        {
+          "text": "认证",
+          "children": [
+            {
+              "text": "CE/FCC/CCC"
+            },
+            {
+              "text": "电梯联动认证"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "团队与工具",
+      "children": [
+        {
+          "text": "AI 辅助研发",
+          "children": [
+            {
+              "text": "DFMEA 自动化"
+            },
+            {
+              "text": "图纸评审 AI 化"
+            }
+          ]
+        },
+        {
+          "text": "测试体系",
+          "children": [
+            {
+              "text": "HIL 台架 ×2"
+            },
+            {
+              "text": "自动回归脚本"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

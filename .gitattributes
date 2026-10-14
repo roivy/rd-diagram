@@ -1,0 +1,10 @@
+# Generated diagram artifacts — keep linguist focused on authored sources.
+/rd-diagram/examples/*.html linguist-generated=true
+/examples/*.html linguist-generated=true
+/demo/*.html linguist-generated=true
+/rd-diagram/assets/template.html linguist-generated=true
+/rd-diagram/renderers/shared/generated-brand-marks.mjs linguist-generated=true
+/rd-diagram/renderers/shared/generated-validators.mjs linguist-generated=true
+
+# Byte-exact checks require LF working trees on every platform.
+* text=auto eol=lf

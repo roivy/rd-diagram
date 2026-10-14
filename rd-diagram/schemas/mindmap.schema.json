@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rd.roivy.internal/schemas/mindmap.schema.json",
+  "title": "Roivy Mind Map",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "diagram_type", "meta", "root", "branches"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "diagram_type": { "const": "mindmap" },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "output"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "subtitle": { "type": "string" },
+        "output": { "$ref": "common.schema.json#/$defs/portableOutputPath" },
+        "quality_profile": { "$ref": "common.schema.json#/$defs/qualityProfile" },
+        "visual_preset": { "$ref": "common.schema.json#/$defs/visualPreset" },
+        "animation": { "$ref": "common.schema.json#/$defs/animation" }
+      }
+    },
+    "root": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1 },
+        "sublabel": { "type": "string" }
+      }
+    },
+    "branches": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 10,
+      "items": { "$ref": "#/$defs/node" }
+    }
+  },
+  "$defs": {
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "sublabel": { "type": "string" },
+        "children": {
+          "type": "array",
+          "maxItems": 8,
+          "items": { "$ref": "#/$defs/node" }
+        }
+      }
+    }
+  }
+}

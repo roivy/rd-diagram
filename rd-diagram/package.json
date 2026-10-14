@@ -1,0 +1,37 @@
+{
+  "name": "rd-diagram",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Roivy — JSON-IR diagram renderers (architecture / workflow / sequence / dataflow / lifecycle).",
+  "license": "MIT",
+  "bin": {
+    "rd": "./bin/rd.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "generate:viewer": "node ../scripts/generate-viewer.mjs",
+    "check:viewer": "node ../scripts/generate-viewer.mjs --check",
+    "generate:brand-marks": "node scripts/generate-brand-marks.mjs",
+    "check:brand-marks": "node scripts/generate-brand-marks.mjs --check",
+    "generate:validators": "node scripts/generate-validators.mjs",
+    "check:validators": "node scripts/generate-validators.mjs --check",
+    "check:release-identity": "node ../scripts/rd-release-identity.mjs",
+    "test:browser": "node ../scripts/run-browser-tests.mjs",
+    "test": "npm run check:viewer && npm run check:brand-marks && npm run check:validators && npm run check:release-identity && node test/golden.mjs && node ../scripts/run-tests.mjs",
+    "render:examples": "node scripts/render-examples.mjs ../examples"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "parse5": "7.3.0",
+    "saxes": "6.0.0",
+    "simple-icons": "16.28.0",
+    "skills": "1.7.0",
+    "yaml": "2.9.1"
+  },
+  "overrides": {
+    "fast-uri": "^3.1.7"
+  }
+}

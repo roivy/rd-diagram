@@ -1,0 +1,674 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "巡检机器人系统架构（DFMEA 视角）",
+    "subtitle": "六域子系统分解 · 关键接口 · 失效影响标注",
+    "output": "robot-dfmea.html",
+    "quality_profile": "showcase",
+    "animation": "trace"
+  },
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "电源域",
+      "wraps": [
+        "battery",
+        "bms",
+        "dock",
+        "pdu"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "机械域",
+      "wraps": [
+        "chassis",
+        "wheels",
+        "suspension",
+        "gimbal-body"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "传感域",
+      "wraps": [
+        "lidar",
+        "tof",
+        "imu",
+        "sonar",
+        "drop-ir",
+        "odo",
+        "mic-array"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "计算与控制域",
+      "wraps": [
+        "compute"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "执行域",
+      "wraps": [
+        "drv-left",
+        "drv-right",
+        "gimbal-servo",
+        "speaker",
+        "led",
+        "estop"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "云端与集成",
+      "wraps": [
+        "fleet",
+        "dashboard",
+        "app",
+        "elevator",
+        "gate"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "battery",
+      "type": "power",
+      "label": "电池包",
+      "sublabel": "4S 20Ah · 失效:续航骤降",
+      "pos": [
+        130,
+        150
+      ],
+      "size": [
+        150,
+        56
+      ]
+    },
+    {
+      "id": "bms",
+      "type": "power",
+      "label": "BMS 管理",
+      "sublabel": "均衡+保护 · 失效:过放",
+      "pos": [
+        130,
+        250
+      ],
+      "size": [
+        150,
+        56
+      ]
+    },
+    {
+      "id": "dock",
+      "type": "connector",
+      "label": "充电桩对接",
+      "sublabel": "极板接触 · 失效:虚接",
+      "pos": [
+        130,
+        350
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "pdu",
+      "type": "power",
+      "label": "配电单元",
+      "sublabel": "冗余保险 · 失效:断电",
+      "pos": [
+        130,
+        450
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "chassis",
+      "type": "actuator",
+      "label": "底盘框架",
+      "sublabel": "镁合金 · 失效:变形",
+      "pos": [
+        130,
+        545
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "wheels",
+      "type": "actuator",
+      "label": "行走轮组",
+      "sublabel": "充气轮 · 失效:磨损打滑",
+      "pos": [
+        130,
+        630
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "suspension",
+      "type": "actuator",
+      "label": "悬挂减震",
+      "sublabel": "失效:异响/松动",
+      "pos": [
+        130,
+        715
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "lidar",
+      "type": "sensor",
+      "label": "激光雷达",
+      "sublabel": "SLAM 建图 · 失效:迷路",
+      "pos": [
+        350,
+        70
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "tof",
+      "type": "sensor",
+      "label": "ToF 深度相机",
+      "sublabel": "障碍识别 · 失效:误撞",
+      "pos": [
+        510,
+        70
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "imu",
+      "type": "sensor",
+      "label": "IMU 惯性单元",
+      "sublabel": "姿态估计 · 失效:漂移",
+      "pos": [
+        670,
+        70
+      ],
+      "size": [
+        130,
+        52
+      ]
+    },
+    {
+      "id": "sonar",
+      "type": "sensor",
+      "label": "超声波阵列",
+      "sublabel": "近距避障 · 失效:玻璃盲区",
+      "pos": [
+        815,
+        70
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "drop-ir",
+      "type": "sensor",
+      "label": "防跌落红外",
+      "sublabel": "台阶检测 · 失效:跌落",
+      "pos": [
+        970,
+        70
+      ],
+      "size": [
+        130,
+        52
+      ]
+    },
+    {
+      "id": "odo",
+      "type": "sensor",
+      "label": "轮式里程计",
+      "sublabel": "失效:打滑误差",
+      "pos": [
+        1115,
+        70
+      ],
+      "size": [
+        130,
+        52
+      ]
+    },
+    {
+      "id": "mic-array",
+      "type": "sensor",
+      "label": "麦克风阵列",
+      "sublabel": "异响检测 · 失效:漏检",
+      "pos": [
+        1260,
+        70
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "compute",
+      "type": "mcu",
+      "label": "主控与计算单元（SoC + 边缘 AI + 存储）",
+      "sublabel": "任务规划/导航/诊断 · 失效:整机失控(S=10)",
+      "pos": [
+        350,
+        230
+      ],
+      "size": [
+        1100,
+        72
+      ]
+    },
+    {
+      "id": "drv-left",
+      "type": "actuator",
+      "label": "左轮驱动",
+      "sublabel": "失效:偏航跑偏",
+      "pos": [
+        350,
+        560
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "drv-right",
+      "type": "actuator",
+      "label": "右轮驱动",
+      "sublabel": "失效:偏航跑偏",
+      "pos": [
+        540,
+        560
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "gimbal-servo",
+      "type": "actuator",
+      "label": "云台舵机",
+      "sublabel": "相机指向 · 失效:画面丢失",
+      "pos": [
+        730,
+        560
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "speaker",
+      "type": "actuator",
+      "label": "扬声器",
+      "sublabel": "避让提示 · 失效:撞人风险",
+      "pos": [
+        920,
+        560
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "led",
+      "type": "actuator",
+      "label": "状态灯带",
+      "sublabel": "失效:状态不可见",
+      "pos": [
+        1090,
+        560
+      ],
+      "size": [
+        140,
+        52
+      ]
+    },
+    {
+      "id": "estop",
+      "type": "security",
+      "label": "急停继电器",
+      "sublabel": "安全链 · 失效:停不下(S=10)",
+      "pos": [
+        1260,
+        560
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "fleet",
+      "type": "cloud",
+      "label": "调度平台",
+      "sublabel": "多机调度 · 失效:任务停滞",
+      "pos": [
+        1480,
+        200
+      ],
+      "size": [
+        150,
+        56
+      ]
+    },
+    {
+      "id": "dashboard",
+      "type": "cloud",
+      "label": "监控大屏",
+      "sublabel": "实时视频",
+      "pos": [
+        1480,
+        300
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "app",
+      "type": "external",
+      "label": "移动 App",
+      "sublabel": "远程接管",
+      "pos": [
+        1480,
+        400
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "elevator",
+      "type": "external",
+      "label": "电梯物联模块",
+      "sublabel": "跨层巡检",
+      "pos": [
+        1480,
+        500
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "gate",
+      "type": "external",
+      "label": "门禁对接",
+      "sublabel": "权限通行",
+      "pos": [
+        1480,
+        600
+      ],
+      "size": [
+        150,
+        52
+      ]
+    },
+    {
+      "id": "gimbal-body",
+      "type": "actuator",
+      "label": "云台机构",
+      "sublabel": "相机承载 · 失效:卡滞",
+      "pos": [
+        130,
+        800
+      ],
+      "size": [
+        150,
+        52
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "d1",
+      "from": "battery",
+      "to": "bms",
+      "label": "14.8V"
+    },
+    {
+      "id": "d2",
+      "from": "bms",
+      "to": "pdu",
+      "label": "保护后母线"
+    },
+    {
+      "id": "d3",
+      "from": "dock",
+      "to": "bms",
+      "label": "充电 5A"
+    },
+    {
+      "id": "d4",
+      "from": "pdu",
+      "to": "compute",
+      "label": "多路配电"
+    },
+    {
+      "id": "d5",
+      "from": "pdu",
+      "to": "drv-left",
+      "label": "24V 驱动轨"
+    },
+    {
+      "id": "d6",
+      "from": "pdu",
+      "to": "drv-right",
+      "label": "24V 驱动轨"
+    },
+    {
+      "id": "d7",
+      "from": "lidar",
+      "to": "compute",
+      "label": "点云 USB"
+    },
+    {
+      "id": "d8",
+      "from": "tof",
+      "to": "compute",
+      "label": "深度图 USB3"
+    },
+    {
+      "id": "d9",
+      "from": "imu",
+      "to": "compute",
+      "label": "六轴 SPI"
+    },
+    {
+      "id": "d10",
+      "from": "sonar",
+      "to": "compute",
+      "label": "回波 GPIO",
+      "labelDy": 44
+    },
+    {
+      "id": "d11",
+      "from": "drop-ir",
+      "to": "compute",
+      "label": "台阶中断"
+    },
+    {
+      "id": "d12",
+      "from": "odo",
+      "to": "compute",
+      "label": "QEI 编码"
+    },
+    {
+      "id": "d13",
+      "from": "mic-array",
+      "to": "compute",
+      "label": "I2S 音频"
+    },
+    {
+      "id": "d14",
+      "from": "compute",
+      "to": "drv-left",
+      "label": "PWM+SPI",
+      "fromSide": "bottom"
+    },
+    {
+      "id": "d15",
+      "from": "compute",
+      "to": "drv-right",
+      "label": "PWM+SPI"
+    },
+    {
+      "id": "d16",
+      "from": "compute",
+      "to": "gimbal-servo",
+      "label": "角度指令"
+    },
+    {
+      "id": "d17",
+      "from": "compute",
+      "to": "speaker",
+      "label": "提示音频"
+    },
+    {
+      "id": "d18",
+      "from": "compute",
+      "to": "led",
+      "label": "状态驱动"
+    },
+    {
+      "id": "d19",
+      "from": "compute",
+      "to": "estop",
+      "label": "安全心跳",
+      "variant": "emphasis",
+      "fromSide": "bottom"
+    },
+    {
+      "id": "d20",
+      "from": "drv-left",
+      "to": "wheels",
+      "label": "扭矩输出"
+    },
+    {
+      "id": "d21",
+      "from": "drv-right",
+      "to": "wheels",
+      "label": "扭矩输出"
+    },
+    {
+      "id": "d22",
+      "from": "wheels",
+      "to": "suspension",
+      "label": "载荷传递"
+    },
+    {
+      "id": "d23",
+      "from": "suspension",
+      "to": "chassis",
+      "label": "悬挂安装"
+    },
+    {
+      "id": "d24",
+      "from": "gimbal-servo",
+      "to": "gimbal-body",
+      "label": "云台驱动"
+    },
+    {
+      "id": "d25",
+      "from": "compute",
+      "to": "fleet",
+      "label": "MQTT 状态"
+    },
+    {
+      "id": "d26",
+      "from": "fleet",
+      "to": "dashboard",
+      "label": "实时推送"
+    },
+    {
+      "id": "d27",
+      "from": "fleet",
+      "to": "app",
+      "label": "指令通道"
+    },
+    {
+      "id": "d28",
+      "from": "fleet",
+      "to": "elevator",
+      "label": "梯控协议",
+      "fromSide": "right",
+      "toSide": "right",
+      "via": [
+        [
+          1668,
+          228
+        ],
+        [
+          1668,
+          526
+        ]
+      ]
+    },
+    {
+      "id": "d29",
+      "from": "fleet",
+      "to": "gate",
+      "label": "门禁联动"
+    },
+    {
+      "id": "d30",
+      "from": "estop",
+      "to": "pdu",
+      "label": "切断回路",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "rose",
+      "title": "DFMEA 顶层结论",
+      "items": [
+        "最高严酷度：主控失效 / 急停链失效 → S=10（人身安全），现有措施：双路安全继电器 + 看门狗",
+        "高频失效模式：轮组打滑导致里程计漂移（O=6），规划增加视觉里程计融合",
+        "接口风险：充电桩极板虚接（S=4/O=5），列入设计改进：增加对接到位检测"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "边界划分原则",
+      "items": [
+        "按物理模块划分六域，域内失效不跨域传播",
+        "安全链（急停）独立于控制域，直连配电"
+      ]
+    }
+  ]
+}

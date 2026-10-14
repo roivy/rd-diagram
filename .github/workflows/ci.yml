@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: rd-diagram
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: rd-diagram/package-lock.json
+      - run: npm ci
+      - name: Deterministic gates (template / brand marks / validators / identity / golden)
+        run: npm run check:viewer && npm run check:brand-marks && npm run check:validators && npm run check:release-identity && node test/golden.mjs
+      - name: Full test suite (unit + real-browser gates)
+        run: node ../scripts/run-tests.mjs

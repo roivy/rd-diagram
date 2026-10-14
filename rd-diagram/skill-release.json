@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "skillId": "rd-diagram",
+  "channel": "stable",
+  "version": "1.0.0",
+  "source": {
+    "repository": "internal://roivy"
+  },
+  "updateManifestUrl": "internal://none"
+}
