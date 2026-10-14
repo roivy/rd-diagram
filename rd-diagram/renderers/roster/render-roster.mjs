@@ -87,7 +87,8 @@ const groupTone = new Map(groups.map((group, index) => [group.id, TONES[index % 
 const groupLabelOf = new Map(groups.map((group) => [group.id, group.label]));
 
 const CSS = `
-    .rd-roster-node rect { fill: var(--bg); stroke: var(--lane-stroke); stroke-width: 1.4; }
+    .rd-roster-person rect { fill: var(--bg); stroke: var(--lane-stroke); stroke-width: 1.4; }
+    html[data-theme="light"] .rd-roster-person rect { fill: #ffffff; }
     .rd-roster-avatar { stroke: var(--lane-stroke); stroke-width: 1; }
     .rd-roster-avatar-text { fill: var(--text); font-weight: 700; text-anchor: middle; }
     .rd-roster-name { fill: var(--text); font-weight: 600; }
@@ -269,7 +270,6 @@ const svg = [
   `      ${svgAccessibleText(roster.meta, 'title')}`,
   `      ${svgAccessibleText(roster.meta, 'description')}`,
   `  <style>${CSS}
-    .rd-roster-root rect { stroke-width: 2.2; }
   </style>`,
   `  <defs><marker id="rd-roster-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 8 4 L 0 8 z" fill="var(--guide-accent)" /></marker></defs>`,
   renderDefinitions(),

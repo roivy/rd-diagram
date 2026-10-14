@@ -5092,7 +5092,8 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
               <title id="rd-diagram-title">项目团队花名册</title>
         <desc id="rd-diagram-description">巡检机器人项目组 · 组织架构树（示例人名为漫威角色）</desc>
   <style>
-    .rd-roster-node rect { fill: var(--bg); stroke: var(--lane-stroke); stroke-width: 1.4; }
+    .rd-roster-person rect { fill: var(--bg); stroke: var(--lane-stroke); stroke-width: 1.4; }
+    html[data-theme="light"] .rd-roster-person rect { fill: #ffffff; }
     .rd-roster-avatar { stroke: var(--lane-stroke); stroke-width: 1; }
     .rd-roster-avatar-text { fill: var(--text); font-weight: 700; text-anchor: middle; }
     .rd-roster-name { fill: var(--text); font-weight: 600; }
@@ -5106,7 +5107,6 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
     .rd-roster-card-box { fill: var(--bg); stroke: var(--lane-stroke); stroke-width: 1.4; }
     .rd-roster-report { fill: none; stroke: var(--guide-accent); stroke-width: 1.8; stroke-dasharray: 6 4; opacity: 0.85; }
 
-    .rd-roster-root rect { stroke-width: 2.2; }
   </style>
   <defs><marker id="rd-roster-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 8 4 L 0 8 z" fill="var(--guide-accent)" /></marker></defs>
         <!-- Definitions -->
