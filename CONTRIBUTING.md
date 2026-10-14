@@ -7,7 +7,7 @@ intent, not formatting.
 ## Getting started
 
 ```bash
-git clone https://github.com/roivy/rd-diagram.git
+git clone https://github.com/roivy/rd-flowchart.git
 cd rd-diagram/rd-diagram
 npm install
 npm test

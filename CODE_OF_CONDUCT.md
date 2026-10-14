@@ -51,7 +51,7 @@ when an individual is officially representing the community in public spaces.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement via
-[GitHub security advisories](https://github.com/roivy/rd-diagram/security/advisories/new)
+[GitHub security advisories](https://github.com/roivy/rd-flowchart/security/advisories/new)
 or by opening a private contact channel with a maintainer.
 All complaints will be reviewed and investigated promptly and fairly.
 

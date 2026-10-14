@@ -7,7 +7,7 @@ The latest `main` branch and the most recent release are supported.
 ## Reporting a vulnerability
 
 Please report vulnerabilities privately via
-[GitHub security advisories](https://github.com/roivy/rd-diagram/security/advisories/new).
+[GitHub security advisories](https://github.com/roivy/rd-flowchart/security/advisories/new).
 Do not open public issues for security problems. You should receive a
 response within a few days.
 

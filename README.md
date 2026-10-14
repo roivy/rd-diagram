@@ -8,10 +8,10 @@ Offline · Single-file HTML · Fully editable · Deterministic
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-4493f8.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%E2%89%A518-22d3ee.svg)](rd-diagram/package.json)
-[![CI](https://github.com/roivy/rd-diagram/actions/workflows/ci.yml/badge.svg)](https://github.com/roivy/rd-diagram/actions/workflows/ci.yml)
-[![Live demo](https://img.shields.io/badge/live-demo-8b5cf6.svg)](https://roivy.github.io/rd-diagram/demo/)
+[![CI](https://github.com/roivy/rd-flowchart/actions/workflows/ci.yml/badge.svg)](https://github.com/roivy/rd-flowchart/actions/workflows/ci.yml)
+[![Live demo](https://img.shields.io/badge/live-demo-8b5cf6.svg)](https://roivy.github.io/rd-flowchart/demo/)
 
-[Live demo](https://roivy.github.io/rd-diagram/demo/) · [Quick start](#quick-start) · [The viewer](#the-viewer-is-the-product) · [Editing](#the-file-is-the-database)
+[Live demo](https://roivy.github.io/rd-flowchart/demo/) · [Quick start](#quick-start) · [The viewer](#the-viewer-is-the-product) · [Editing](#the-file-is-the-database)
 
 <img src="docs/screenshots/slide-00-cover.png" alt="Roivy Diagram deck cover" width="880">
 
@@ -72,7 +72,7 @@ Diagrams are meant to live, not rot:
 ## Quick start
 
 ```bash
-git clone https://github.com/roivy/rd-diagram.git
+git clone https://github.com/roivy/rd-flowchart.git
 cd rd-diagram/rd-diagram
 npm install
 npm test          # 1900+ checks, including real-browser gates
@@ -113,7 +113,7 @@ runs offline.
 
 A ten-page, zero-click demo deck (cover + one page per diagram type):
 
-➡️ **[roivy.github.io/rd-diagram/demo](https://roivy.github.io/rd-diagram/demo/)**
+➡️ **[roivy.github.io/rd-flowchart/demo](https://roivy.github.io/rd-flowchart/demo/)**
 
 Arrow keys to flip pages; every page auto-plays its trace animation and shows
 its grouped node index.
