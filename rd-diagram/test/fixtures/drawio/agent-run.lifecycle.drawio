@@ -1,0 +1,82 @@
+<mxfile host="rd-diagram" modified="" agent="rd-diagram" version="24.0.0">
+  <diagram id="rd-export-1" name="Agent Run Lifecycle">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c2" value="Queued&#10;request accepted" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="35" y="126" width="118" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="Planning&#10;build task graph" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="189" y="126" width="118" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="Executing&#10;tool calls" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="343" y="126" width="118" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="Reviewing&#10;quality gate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=12;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="497" y="126" width="118" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="Completed&#10;final response" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="651" y="126" width="118" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" value="Needs Approval&#10;human gate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="339" y="278" width="126" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" value="Blocked&#10;missing input" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="493" y="278" width="126" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" value="Failed&#10;recoverable error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="339" y="356" width="126" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" value="Cancelled&#10;user stopped" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="343" y="450" width="118" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" value="Expired&#10;timeout" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="497" y="450" width="118" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c4" target="c7">
+          <Array as="points">
+            <mxPoint x="402" y="233" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c4" target="c9">
+          <Array as="points">
+            <mxPoint x="320" y="157" />
+            <mxPoint x="320" y="385" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c5" target="c8">
+          <Array as="points">
+            <mxPoint x="556" y="233" />
+            <mxPoint x="556" y="233" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c15" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c7" target="c10">
+          <Array as="points">
+            <mxPoint x="480" y="336" />
+            <mxPoint x="480" y="432" />
+            <mxPoint x="402" y="432" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c8" target="c11">
+          <Array as="points">
+            <mxPoint x="556" y="393" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c17" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c9" target="c4">
+          <Array as="points">
+            <mxPoint x="20" y="385" />
+            <mxPoint x="20" y="80" />
+            <mxPoint x="402" y="80" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

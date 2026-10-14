@@ -1,0 +1,102 @@
+<mxfile host="rd-diagram" modified="" agent="rd-diagram" version="24.0.0">
+  <diagram id="rd-export-1" name="Sample Web App">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c2" value="AWS Region: us-west-2" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="220" y="120" width="820" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="sg-api :443/:8000" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="430" y="270" width="400" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="Auth Provider&#10;OAuth 2.0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=12;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="40" y="110" width="120" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="Redis&#10;cache :6379" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=11" vertex="1" parent="c2">
+          <mxGeometry x="450" y="30" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="Users&#10;Browser / Mobile" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#999999;arcSize=12;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" value="CloudFront&#10;CDN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=12;fontSize=11" vertex="1" parent="c2">
+          <mxGeometry x="30" y="180" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" value="Load Balancer&#10;HTTPS :443" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=12;fontSize=11" vertex="1" parent="c3">
+          <mxGeometry x="30" y="30" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" value="API Server&#10;FastAPI :8000" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=11" vertex="1" parent="c3">
+          <mxGeometry x="240" y="30" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" value="PostgreSQL&#10;primary :5432" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=11" vertex="1" parent="c2">
+          <mxGeometry x="660" y="180" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" value="S3&#10;static assets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=12;fontSize=11" vertex="1" parent="c2">
+          <mxGeometry x="30" y="320" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" value="SQS&#10;job queue" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;arcSize=12;fontSize=11" vertex="1" parent="c2">
+          <mxGeometry x="450" y="320" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" value="Worker&#10;async jobs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=11" vertex="1" parent="c2">
+          <mxGeometry x="660" y="320" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" value="verify JWT" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c4" target="c9">
+          <Array as="points">
+            <mxPoint x="620" y="142" />
+            <mxPoint x="620" y="246" />
+            <mxPoint x="735" y="246" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c15" value="HTTPS" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c6" target="c7">
+          <Array as="points">
+            <mxPoint x="205" y="330" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c7" target="c8">
+          <Array as="points">
+            <mxPoint x="420" y="330" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c17" value="static" style="edgeStyle=none;rounded=0;html=1;dashed=1" edge="1" parent="1" source="c7" target="c11">
+          <Array as="points">
+            <mxPoint x="315" y="400" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c18" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c8" target="c9">
+          <Array as="points">
+            <mxPoint x="630" y="330" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c19" value="read-through" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c9" target="c5">
+          <Array as="points">
+            <mxPoint x="735" y="255" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c20" value="SQL" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c9" target="c10">
+          <Array as="points">
+            <mxPoint x="840" y="330" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c21" value="enqueue" style="edgeStyle=none;rounded=0;html=1;dashed=1" edge="1" parent="1" source="c9" target="c12">
+          <Array as="points">
+            <mxPoint x="735" y="400" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c22" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c12" target="c13">
+          <Array as="points">
+            <mxPoint x="840" y="470" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

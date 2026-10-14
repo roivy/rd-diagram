@@ -1,0 +1,141 @@
+<mxfile host="rd-diagram" modified="" agent="rd-diagram" version="24.0.0">
+  <diagram id="rd-export-1" name="Agent Tool Call Workflow">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c2" value="01 / User Interface" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1;swimlaneFillColor=none" vertex="1" parent="1">
+          <mxGeometry x="40" y="52" width="1028" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="02 / Agent Runtime" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1;swimlaneFillColor=none" vertex="1" parent="1">
+          <mxGeometry x="40" y="178" width="1028" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="Agent Planner" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="421.2" y="216" width="300" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="EX / Policy &amp;amp; Recovery" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1;swimlaneFillColor=none" vertex="1" parent="1">
+          <mxGeometry x="40" y="312" width="1028" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="Approval Gate" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="581.2" y="350" width="478.8" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" value="04 / Tool Execution &amp;amp; Evidence" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1;swimlaneFillColor=none" vertex="1" parent="1">
+          <mxGeometry x="40" y="446" width="1028" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" value="group" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="204" y="484" width="357.2" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" value="Tool Call" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="760" y="484" width="300" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" value="User&#10;asks for work" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#999999;arcSize=12;fontSize=11" vertex="1" parent="c2">
+          <mxGeometry x="8" y="42" width="132" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" value="Chat Surface&#10;thread + files" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=12;fontSize=11" vertex="1" parent="c2">
+          <mxGeometry x="168" y="42" width="132" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" value="Final Reply&#10;answer + changes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=11" vertex="1" parent="c2">
+          <mxGeometry x="884" y="42" width="132" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" value="Agent Planner&#10;plan next step" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=11" vertex="1" parent="c4">
+          <mxGeometry x="4" y="3" width="132" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" value="Tool Router&#10;choose capability" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=11" vertex="1" parent="c4">
+          <mxGeometry x="164" y="11" width="132" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="c15" value="Approval Gate&#10;scope + consent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=12;fontSize=11" vertex="1" parent="c6">
+          <mxGeometry x="4" y="3" width="132" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" value="Blocked&#10;wait or reject" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=12;fontSize=11" vertex="1" parent="c6">
+          <mxGeometry x="182.8" y="11" width="132" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="c17" value="Retry Path&#10;revise request" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;arcSize=12;fontSize=11" vertex="1" parent="c6">
+          <mxGeometry x="342.8" y="11" width="132" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="c18" value="Tool Call&#10;shell / browser / MCP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;arcSize=12;fontSize=11" vertex="1" parent="c9">
+          <mxGeometry x="4" y="3" width="132" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="c19" value="Context Store&#10;repo + memory" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=11" vertex="1" parent="c8">
+          <mxGeometry x="4" y="11" width="132" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="c20" value="Trace Log&#10;events + output" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=11" vertex="1" parent="c8">
+          <mxGeometry x="221.2" y="11" width="132" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="c21" value="External API&#10;network service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=12;fontSize=11" vertex="1" parent="c9">
+          <mxGeometry x="164" y="11" width="132" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="c22" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c10" target="c11">
+          <Array as="points">
+            <mxPoint x="194" y="120" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c23" value="plan" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c11" target="c13">
+          <Array as="points">
+            <mxPoint x="274" y="253" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c24" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c13" target="c14">
+          <Array as="points">
+            <mxPoint x="571.2" y="253" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c25" value="needs approval?" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c14" target="c15">
+          <Array as="points">
+            <mxPoint x="651.2" y="302" />
+            <mxPoint x="569.2" y="302" />
+            <mxPoint x="569.2" y="387" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c26" value="denied" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c15" target="c16">
+          <Array as="points">
+            <mxPoint x="651.2" y="442" />
+            <mxPoint x="830" y="442" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c27" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c15" target="c18">
+          <Array as="points">
+            <mxPoint x="639.2" y="521" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c28" value="" style="edgeStyle=none;rounded=0;html=1;dashed=1" edge="1" parent="1" source="c16" target="c17">
+          <Array as="points">
+            <mxPoint x="910" y="387" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c29" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c18" target="c21">
+          <Array as="points">
+            <mxPoint x="910" y="521" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c30" value="trace + memory" style="edgeStyle=none;rounded=0;html=1;dashed=1" edge="1" parent="1" source="c19" target="c20">
+          <Array as="points">
+            <mxPoint x="382.6" y="521" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c31" value="" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c21" target="c12">
+          <Array as="points">
+            <mxPoint x="1080" y="521" />
+            <mxPoint x="1080" y="120" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c32" value="record result" style="edgeStyle=none;rounded=0;html=1;dashed=1" edge="1" parent="1" source="c21" target="c20">
+          <Array as="points">
+            <mxPoint x="990" y="579" />
+            <mxPoint x="491.2" y="579" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

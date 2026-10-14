@@ -1,6 +1,6 @@
 {
   "name": "rd-diagram",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "description": "Roivy — JSON-IR diagram renderers (architecture / workflow / sequence / dataflow / lifecycle).",

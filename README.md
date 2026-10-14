@@ -52,6 +52,9 @@ Every generated file ships with a full interactive runtime — not a static pict
   6M category, or lane; click to fly to it.
 - **Themes, presets, exports** — dark/light, multiple visual presets,
   print-safe export, standalone SVG.
+- **draw.io export** — one command turns any diagram into an editable
+  `.drawio` file (deterministic mxGraph XML, waypoints and group frames
+  preserved).
 - **Presentation deck & encrypted sharing** — build a keynote-style deck from
   your artifacts, page-enter light effects included, and emit a single
   encrypted `index_share.html` for controlled distribution.

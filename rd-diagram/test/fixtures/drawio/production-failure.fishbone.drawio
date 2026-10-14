@@ -1,0 +1,202 @@
+<mxfile host="rd-diagram" modified="" agent="rd-diagram" version="24.0.0">
+  <diagram id="rd-export-1" name="机器人退货失效分析（FA）">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c2" value="人" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=0;dashed=1;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1;fillColor=none" vertex="1" parent="1">
+          <mxGeometry x="300.33" y="59" width="190" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="料" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=0;dashed=1;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1;fillColor=none" vertex="1" parent="1">
+          <mxGeometry x="527" y="59" width="190" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="环" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;rounded=0;dashed=1;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1;fillColor=none" vertex="1" parent="1">
+          <mxGeometry x="753.67" y="59" width="190" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="人 · 装机调试未按 SOP…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=14" vertex="1" parent="c2">
+          <mxGeometry x="-16.4" y="79.7" width="174" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="料 · 轮组橡胶耐磨不足…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=12;fontSize=14;strokeWidth=2" vertex="1" parent="c3">
+          <mxGeometry x="1.5" y="108.5" width="167" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" value="环 · 强日光干扰 ToF…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;arcSize=12;fontSize=14" vertex="1" parent="c4">
+          <mxGeometry x="19.4" y="137.3" width="160" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" value="人 · 客户地面超规格使用…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=14" vertex="1" parent="c2">
+          <mxGeometry x="179.3" y="166.1" width="181" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" value="料 · 电池批次一致性差…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=12;fontSize=14" vertex="1" parent="c3">
+          <mxGeometry x="200.7" y="194.9" width="167" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" value="环 · 地毯线缆缠绕频发…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;arcSize=12;fontSize=14" vertex="1" parent="c4">
+          <mxGeometry x="215.1" y="223.7" width="167" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" value="人 · 客服未引导首充循环…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=14" vertex="1" parent="c2">
+          <mxGeometry x="66.5" y="252.5" width="181" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" value="料 · 外壳卡扣料脆" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=12;fontSize=14" vertex="1" parent="c3">
+          <mxGeometry x="105.4" y="281.3" width="132" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" value="巡检机器人退货率超标" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=12" vertex="1" parent="1">
+          <mxGeometry x="1440" y="368" width="290" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" value="机 · 充电桩极板公差大…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="373.83" y="503.5" width="167" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c15" value="测 · 老化未覆盖满载行走…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=12;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="961.77" y="532.3" width="181" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" value="法 · 出厂老化时长不够…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="727.7" y="561.1" width="167" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c17" value="机 · 云台舵机虚焊" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=14;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="504.13" y="589.9" width="132" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c18" value="测 · 产线导通抽检偏松…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=12;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="769.57" y="618.7" width="167" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c19" value="法 · DFMEA 未覆盖地毯场…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="516.5" y="647.5" width="191" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c20" value="机 · 驱动板功率余量不足…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="280.43" y="676.3" width="181" height="20.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c21" value="机" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=0;dashed=1;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1;fillColor=none" vertex="1" parent="1">
+          <mxGeometry x="300.33" y="759" width="190" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="c22" value="法" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=0;dashed=1;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1;fillColor=none" vertex="1" parent="1">
+          <mxGeometry x="527" y="759" width="190" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="c23" value="测" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;dashed=1;verticalAlign=top;align=left;spacingLeft=6;fontStyle=1;fillColor=none" vertex="1" parent="1">
+          <mxGeometry x="753.67" y="759" width="190" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="c24" value="人" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c2" target="c13">
+          <Array as="points">
+            <mxPoint x="503.33" y="270" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c25" value="料" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c3" target="c13">
+          <Array as="points">
+            <mxPoint x="730" y="270" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c26" value="环" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c4" target="c13">
+          <Array as="points">
+            <mxPoint x="956.67" y="270" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c27" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c5" target="c2">
+          <Array as="points">
+            <mxPoint x="370.93" y="161.2" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c28" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c6" target="c3">
+          <Array as="points">
+            <mxPoint x="612" y="190" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c29" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c7" target="c4">
+          <Array as="points">
+            <mxPoint x="853.07" y="218.8" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c30" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c8" target="c2">
+          <Array as="points">
+            <mxPoint x="570.13" y="247.6" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c31" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c9" target="c3">
+          <Array as="points">
+            <mxPoint x="811.2" y="276.4" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c32" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c10" target="c4">
+          <Array as="points">
+            <mxPoint x="1052.27" y="305.2" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c33" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c11" target="c2">
+          <Array as="points">
+            <mxPoint x="457.33" y="334" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c34" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c12" target="c3">
+          <Array as="points">
+            <mxPoint x="698.4" y="362.8" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c35" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c14" target="c21">
+          <Array as="points">
+            <mxPoint x="457.33" y="526" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c36" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c15" target="c23">
+          <Array as="points">
+            <mxPoint x="1052.27" y="554.8" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c37" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c16" target="c22">
+          <Array as="points">
+            <mxPoint x="811.2" y="583.6" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c38" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c17" target="c21">
+          <Array as="points">
+            <mxPoint x="570.13" y="612.4" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c39" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c18" target="c23">
+          <Array as="points">
+            <mxPoint x="853.07" y="641.2" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c40" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c19" target="c22">
+          <Array as="points">
+            <mxPoint x="612" y="670" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c41" value="" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1" edge="1" parent="1" source="c20" target="c21">
+          <Array as="points">
+            <mxPoint x="370.93" y="698.8" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c42" value="机" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c21" target="c13">
+          <Array as="points">
+            <mxPoint x="503.33" y="590" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c43" value="法" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c22" target="c13">
+          <Array as="points">
+            <mxPoint x="730" y="590" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c44" value="测" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c23" target="c13">
+          <Array as="points">
+            <mxPoint x="956.67" y="590" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

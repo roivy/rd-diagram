@@ -1,0 +1,140 @@
+<mxfile host="rd-diagram" modified="" agent="rd-diagram" version="24.0.0">
+  <diagram id="rd-export-1" name="项目团队花名册">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c2" value="林致远&#10;项目总监&#10;PMP · IPD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="865" y="30" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="徐玲&#10;项目经理&#10;敏捷 · Scrum" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="9" y="168" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="陈锋&#10;硬件负责人&#10;原理图 · PCB · EMC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="330" y="168" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="郑宇&#10;软件负责人&#10;RTOS · C++" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="865" y="168" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="白露&#10;测试负责人&#10;自动化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="1400" y="168" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" value="秦峰&#10;交付与服务负责人&#10;现场" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="1721" y="168" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" value="吴涛&#10;电机驱动工程师&#10;FOC · 驱动" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="223" y="306" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" value="袁博&#10;电源工程师&#10;DCDC · 电池" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="437" y="306" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" value="沈砚&#10;SLAM 算法工程师&#10;SLAM · ROS2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="651" y="306" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" value="方启&#10;嵌入式工程师&#10;STM32 · CAN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="865" y="306" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" value="韩萌&#10;上位机工程师&#10;Qt · Web" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="1079" y="306" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" value="邓阔&#10;DFMEA 工程师&#10;FMEA · 8D" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="1293" y="306" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" value="顾岩&#10;可靠性工程师&#10;HALT · 寿命" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="1507" y="306" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c15" value="何静&#10;海外交付工程师&#10;英语 · 培训" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=12;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="1721" y="306" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" value="汇报" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c3" target="c2">
+          <Array as="points">
+            <mxPoint x="963" y="129" />
+            <mxPoint x="107" y="129" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c17" value="汇报" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c4" target="c2">
+          <Array as="points">
+            <mxPoint x="963" y="129" />
+            <mxPoint x="428" y="129" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c18" value="汇报" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c5" target="c2">
+          <Array as="points">
+            <mxPoint x="963" y="129" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c19" value="汇报" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c6" target="c2">
+          <Array as="points">
+            <mxPoint x="963" y="129" />
+            <mxPoint x="1498" y="129" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c20" value="汇报" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c7" target="c2">
+          <Array as="points">
+            <mxPoint x="963" y="129" />
+            <mxPoint x="1819" y="129" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c21" value="汇报" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c8" target="c4">
+          <Array as="points">
+            <mxPoint x="428" y="267" />
+            <mxPoint x="321" y="267" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c22" value="汇报" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c9" target="c4">
+          <Array as="points">
+            <mxPoint x="428" y="267" />
+            <mxPoint x="535" y="267" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c23" value="汇报" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c10" target="c5">
+          <Array as="points">
+            <mxPoint x="963" y="267" />
+            <mxPoint x="749" y="267" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c24" value="汇报" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c11" target="c5">
+          <Array as="points">
+            <mxPoint x="963" y="267" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c25" value="汇报" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c12" target="c5">
+          <Array as="points">
+            <mxPoint x="963" y="267" />
+            <mxPoint x="1177" y="267" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c26" value="汇报" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c13" target="c6">
+          <Array as="points">
+            <mxPoint x="1498" y="267" />
+            <mxPoint x="1391" y="267" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c27" value="汇报" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c14" target="c6">
+          <Array as="points">
+            <mxPoint x="1498" y="267" />
+            <mxPoint x="1605" y="267" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c28" value="汇报" style="edgeStyle=none;rounded=0;html=1" edge="1" parent="1" source="c15" target="c7">
+          <Array as="points">
+            <mxPoint x="1819" y="267" />
+          </Array>
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

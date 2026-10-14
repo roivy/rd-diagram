@@ -3,7 +3,7 @@ name: rd-diagram
 description: "Roivy research & development diagram toolkit: turn plain descriptions, documents, or Mermaid input into validated standalone HTML engineering diagrams — architecture, workflow, sequence, data-flow, and lifecycle/state — with dark/light themes, focus & trace reading tools, and PNG/SVG export. Use when the user wants a system architecture / DFMEA structure / electronic block diagram, module relations, process flow, API sequence, data pipeline, or state machine, or says 架构图/框图/拓扑/流程图/原理框图 and expects polished interactive output. Not for numeric charts or dashboards."
 license: MIT
 metadata:
-  version: "1.0"
+  version: "1.1"
   author: Roivy
 ---
 
@@ -86,6 +86,8 @@ When `layoutReviewRecommendation.action` is `inspect-sequence-width`, follow [Se
 Perceptual review is optional for ordinary generation, including a newly positioned Architecture. Use [Optional capture evidence](references/delivery-contract.md#optional-capture-evidence), with `--out-dir <folder>/visual-check`, when the user requests visual review, during development audits, or for a concrete route/browser concern. `visualReviewRecommendation` is advisory. Inspect captures before claiming visual quality; otherwise report automated checks only.
 
 Read [Delivery contract](references/delivery-contract.md) for failed gates, standalone commands, provenance/recovery, repeated delivery, exports, or opening. Recovery follows `deliver` → strict provenance `check` → `browser-check`; captures require strict provenance.
+
+draw.io hand-off: `node bin/rd.mjs export drawio <type> <input.json> [output.drawio] [--theme light|dark] [--json]` converts any of the eight types into an editable, deterministic `.drawio` (mxGraph XML) — read [draw.io export](references/drawio-export.md) for the mapping table, the decoration trade-offs, and the fail-closed contract before promising visual parity.
 
 For workflow viewport overflow, read [Workflow viewport repair](references/authoring-contract.md#workflow-viewport-repair) before the next layout edit.
 
